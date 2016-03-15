@@ -39,10 +39,18 @@
     <body>
         <textarea id="source">
 Hi my name is David Colgan
-I've been using Vim nearly every day for what 10 years now?
-I saw the afflictions of carpal tunnel strike several people at my college and sought to prevent it for myself
-One of the best ways that I know to be more ergonomic as a programmer is in fact to use Vim.  It is in my opinion, the most ergonomic text editor even without any customization!
-But today I'd like to offer you 3 ways that you can take your ergonomics to the next level.
+I run a little Django and sometimes Nodejs web dev consultancy called Less Boring.
+I use Vim every day in my work and have done so for at least 10 years now I think it is.
+
+I'd like to share some thoughts with you about Vim and Ergonomics.
+
+I've put a fair amount of time into optimizing my computer ergonomics, and I'm a big fan of things like standing desks and the Roost stand, anything that removes the folded in half syndrome of coding on a laptop.
+
+Another aspect of ergonomics is taking care of your wrists while typing, and that's what I'd like to focus on here.
+
+Now, I would say that Vim is already the most ergonomic text editor even without any customization. Thanks to the way it reduces the need for modifier keys and it's modal nature, you can reduce unnecessary movements to the arrow keys and mouse.
+
+But today I'd like to offer you 3 ways that you can take your Vimming ergonomics to the next level.
 
 1. Make Escape Easier to hit
 Show 4 pictures:
@@ -52,7 +60,7 @@ switch between them
 anticipation
 super reach to the escape key with pinky
 
-The escape key is the most important key in using Vim effectively.  Very early on I was given the excellent advice to stay out of insert mode as much as possible.  If you stay in insert mode and use the arrow keys, Vim is in many ways worse of a text editor than Notepad.  The real editing power is in normal mode, and the process of switching back and forth between insert mode.
+I would argue that escape is the most important key in effictive Vimming.  Very early on I was given the excellent advice to stay out of insert mode as much as possible.  If you stay in insert mode and use the arrow keys, Vim is in many ways worse of a text editor than Notepad.  The real power is in normal mode.
 
 But some smart person decided that the rest of the world didn't need escape very much and stuck it way up here, requiring us Vimmers to do some form of this weird spasm every time you leave insert mode!
 
@@ -68,6 +76,25 @@ inoremap jk <esc>
 
 2. Reclaim the Alt key
 
+But now I hear what you must surely be saying, "David, we switched to Vim so that we WOULDNT have to use Emacs.  What's this about ctrl keys?"
+
+And you would be right, because the ctrl key, while one of the most important keys on the keyboard, is the hardest key to type.
+
+You have to either use this
+
+very innacurate pinky extend and hope you hit the key
+show normal
+or you can use the pinky knucle
+show normal
+or you can use this ungodly whole wrist curling motion
+
+The pinky get's a bad deal
+It is by far the weakest finger, but it has by far the most keys it has to hit!
+
+Keys hit most commonly should be hit by the strongest finger.  Can we somehow move control key duty to the thumb?
+
+
+
 The most difficult key to hit on a keyboard is also one of the most important in general: Ctrl
 Show pictures
 normal typing 1
@@ -82,6 +109,10 @@ Mac OSX
 
 3. Reclaim the Spacebar
 
+Okay so moving keys around might be a little too much for you to handle, and I definitely understand that.  But this final idea can be done by every one of you because I guarantee you don't already use this key for ANYTHING.
+
+Let's go back to our big strong friends our two thumbs.  The spacebar is one of the most commonly hit keys on the keyboard in insert mode, but have you ever used it in command mode?  You may be pleasantly surprised to find that this amazing key is mapped to nothing other than move right.  The same as the right arrow key or L.  Since we already have at least two ways of doing this exact movement, we can use space for all of our most common custom shortcuts!
+
 The spacebar is the easiest key to hit.  You can use either of your thumbs, and they even rest normally above it.  So why  are we not using this key way more often?
 
 Map your leader to <space>
@@ -93,14 +124,9 @@ I like to
     no <space><space> :wa<cr>
     no <space>h :nohlsearch<cr>
 
-
-Picture of the thumb looking bored and the pinky looking overworked
-
-So why does the pinky get so much responsibility while both thumbs share one key?
-
 ---
 
-class: center, middle, inverse, hljs-monokai
+class: center, middle
 
 # .title[Vim and<br>Ergonomics]
 
@@ -108,21 +134,99 @@ class: center, middle, inverse, hljs-monokai
 
 ---
 
-![](hands/normal-hand.jpg)
+class: center, middle
 
-# Happy Hand
+# Three Ways To Make Vim More Ergonomic
 
 ---
 
-![](hands/painful-curled-hand.jpg)
+class: center, middle
 
-# Painful Emacs Hand
+# 1. Escape Is Too<br>Hard To Hit
 
-Use your thumb more
+---
 
-Put Ctrl on Alt and Ctrl on Windows
-Backspace and Caps Lock
-Use the spacebar
+# Commands Available
+
+![](pictures/commandsbymode.png)
+
+---
+
+![](hands/normal-hand.jpg)
+
+---
+
+![](hands/hitescape-1.jpg)
+
+---
+
+![](hands/normal-hand.jpg)
+
+---
+
+![](hands/hitescape-2.jpg)
+
+---
+
+![](hands/normal-hand.jpg)
+
+---
+
+![](hands/hitescape-3.jpg)
+
+---
+
+class: center, middle
+
+# Move It Closer!
+
+---
+
+# Move It To Caps Lock
+
+![](pictures/remap-escape.jpg)
+
+---
+
+class: center, middle
+
+# Use Aliases
+
+## `<C-[>`
+
+## `<C-c>`
+
+---
+
+class: center, middle
+
+# Insert Mode Sequence
+
+## `inoremap jk <esc>`
+
+## `inoremap kj <esc>`
+
+## `inoremap jj <esc>`
+
+---
+
+class: center, middle
+
+# Escape Too Far Away?
+
+# Move It Closer!
+
+---
+
+class: center, middle
+
+# 2. Ctrl Is Too<br>Hard To Hit!
+
+---
+
+class: center, middle
+
+![](pictures/emacs.png)
 
 ---
 
@@ -152,6 +256,46 @@ Use the spacebar
     <C-x><C-l> Autocomplete line
     <C-x><C-o> Omnicomplete
 ```
+
+---
+
+![](hands/normal-hand.jpg)
+
+---
+
+![](hands/painful-curled-hand-1.jpg)
+
+---
+
+# Back in the Day
+
+![](pictures/old-keyboard.jpg)
+
+By Retro-Computing Society of Rhode Island - Own work, CC BY-SA 3.0, [https://commons.wikimedia.org/w/index.php?curid=3388741](https://commons.wikimedia.org/w/index.php?curid=3388741)
+
+---
+
+# Not Too Long Ago
+
+![](pictures/medium-keyboard.jpg)
+
+---
+
+# Today
+
+![](hands/thumb-hit-alt.jpg)
+
+---
+
+# Today
+
+![](hands/thumb-hit-space.jpg)
+
+---
+
+# Use Your Thumb
+
+![](pictures/strengthbyfinger.png)
 
 ---
 
@@ -215,6 +359,14 @@ From http://shine.eu.org/ubuntu-esperanto/
 ![](pictures/changeosx.jpg)
 
 From [http://superuser.com/questions/250611/mac-os-change-command-to-control-key/250614#250614](http://superuser.com/questions/250611/mac-os-change-command-to-control-key/250614#250614)
+
+---
+
+class: center, middle
+
+# Ctrl Too Hard To Hit?
+
+# Use Your Thumb!
 
 ---
 
