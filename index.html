@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Vim and Ergonomics | David S Colgan</title>
-        <meta charset="utf-8">
-        <style>
+<head>
+    <title>Vim and Ergonomics | David S Colgan</title>
+    <meta charset="utf-8">
+    <style>
         @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
         body {
@@ -17,7 +17,7 @@
             font-size: 100px;
         }
         .remark-slide-content h1 {
-            font-size: 72px;
+            font-size: 70px;
         }
 
         .remark-slide-content code {
@@ -34,10 +34,10 @@
             font-size: 30px;
             font-family: monospace;
         }
-        </style>
-    </head>
-    <body>
-        <textarea id="source">
+    </style>
+</head>
+<body>
+        <!--
 Hi my name is David Colgan
 I run a little Django and sometimes Nodejs web dev consultancy called Less Boring.
 I use Vim every day in my work and have done so for at least 10 years now I think it is.
@@ -124,8 +124,9 @@ I like to
     no <space><space> :wa<cr>
     no <space>h :nohlsearch<cr>
 
----
+-->
 
+<textarea id="source">
 class: center, middle
 
 # .title[Vim and<br>Ergonomics]
@@ -293,7 +294,13 @@ By Retro-Computing Society of Rhode Island - Own work, CC BY-SA 3.0, [https://co
 
 ---
 
-# Use Your Thumb
+class: center, middle
+
+# Use Your Thumb!
+
+---
+
+# Strength By Finger
 
 ![](pictures/strengthbyfinger.png)
 
@@ -370,69 +377,107 @@ class: center, middle
 
 ---
 
-# Use the Spacebar!
+class: center, middle
+
+# 3. Wasted Spacebar Potential
+
+---
+
+class: center, middle
+
+# In Normal Mode<br>Space Is Move Right
+
+---
+
+class: center, middle
+
+# Make It Your Leader
 
 ```html
-    let mapleader = ","
+let mapleader = " "
 ```
 
 ---
+
+class: center, middle
 
 # Pane Splitting
 
 ```html
-    noremap <leader>v <C-w>v
-    noremap <leader>s <C-w>s
+noremap <leader>v <C-w>v
+noremap <leader>s <C-w>s
 ```
 
 ---
+
+class: center, middle
 
 # Pane Jumping
 
 ```html
-    noremap <leader>h <C-w>h
-    noremap <leader>j <C-w>j
-    noremap <leader>k <C-w>k
-    noremap <leader>l <C-w>l
+noremap <leader>h <C-w>h
+noremap <leader>j <C-w>j
+noremap <leader>k <C-w>k
+noremap <leader>l <C-w>l
 ```
 
 ---
+
+class: center, middle
 
 # Clear Search Highlight
 
 ```html
-    noremap <leader>h :nohlsearch<cr>
+noremap <leader>h :nohlsearch<cr>
 ```
 
 ---
+
+class: center, middle
 
 # Save All
 
 ```html
-    noremap <leader><leader> :wa<cr>
+noremap <leader><leader> :wa<cr>
 ```
 
 ---
 
-# Picture of hitting the spacebar exaggeratedly with the left thumb
+class: center, middle
 
----
+# Wasted Spacebar Potential?
 
-# Picture of hitting the spacebar exaggeratedly with the right thumb
-    
+# Make It Your Leader
+
 ---
 
 # Further Ideas
 
-* Switch Caps Lock and Backspace
-* Use the Dvorak Keyboard Layout
-* Get a Roost Stand
+## Switch Caps Lock and Backspace
+## Use the Dvorak Keyboard Layout
+## Elevate Your Monitor or<br>Get a Roost Stand
 
-        </textarea>
-        <script src="remark-latest.min.js">
-        </script>
-        <script>
-var slideshow = remark.create();
-        </script>
-    </body>
+---
+
+class: right
+
+# Say Hello:
+
+## david@lessboring.com
+
+## www.lessboring.com
+
+## @davidscolgan
+
+<br>
+
+### These slides will be posted at<br>[lessboring.com/talks/vim-and-ergonomics](http://www.lessboring.com/talks/vim-and-ergonomics)
+
+</textarea>
+<script src="remark-latest.min.js">
+</script>
+<script>
+    var slideshow = remark.create();
+</script>
+</body>
 </html>
