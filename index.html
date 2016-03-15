@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vim and Ergonomics | David S Colgan</title>
+        <meta charset="utf-8">
+        <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+        body {
+            font-family: Lato, sans-serif;
+        }
+
+        h1, h2, h3 {
+        }
+
+        .title {
+            font-size: 100px;
+        }
+        .remark-slide-content h1 {
+            font-size: 72px;
+        }
+
+        .remark-slide-content code {
+        }
+
+        .red {
+            color: red;
+        }
+        img {
+            width: 100%;
+        }
+
+        .remark-code {
+            font-size: 30px;
+            font-family: monospace;
+        }
+        </style>
+    </head>
+    <body>
+        <textarea id="source">
+Hi my name is David Colgan
+I've been using Vim nearly every day for what 10 years now?
+I saw the afflictions of carpal tunnel strike several people at my college and sought to prevent it for myself
+One of the best ways that I know to be more ergonomic as a programmer is in fact to use Vim.  It is in my opinion, the most ergonomic text editor even without any customization!
+But today I'd like to offer you 3 ways that you can take your ergonomics to the next level.
+
+1. Make Escape Easier to hit
+Show 4 pictures:
+normal typing 1
+normal typing 2
+switch between them
+anticipation
+super reach to the escape key with pinky
+
+The escape key is the most important key in using Vim effectively.  Very early on I was given the excellent advice to stay out of insert mode as much as possible.  If you stay in insert mode and use the arrow keys, Vim is in many ways worse of a text editor than Notepad.  The real editing power is in normal mode, and the process of switching back and forth between insert mode.
+
+But some smart person decided that the rest of the world didn't need escape very much and stuck it way up here, requiring us Vimmers to do some form of this weird spasm every time you leave insert mode!
+
+When I'm doing fine text surgery on my code, I can be hitting escape every few seconds.  This is not fun.
+
+Answer: move escape closer.
+
+Put it on Caps Lock
+Use Ctrl+c
+Use Ctrl+[
+Use an insert mode combo like jj or jk
+inoremap jk <esc>
+
+2. Reclaim the Alt key
+
+The most difficult key to hit on a keyboard is also one of the most important in general: Ctrl
+Show pictures
+normal typing 1
+normal typing 2
+painful ctrl key pressing
+
+There are a couple of ways of doing this
+Windows SharkKeys and AutoHotKey
+Linux - Ubuntu has it built in or Xmodmap
+Mac OSX
+
+
+3. Reclaim the Spacebar
+
+The spacebar is the easiest key to hit.  You can use either of your thumbs, and they even rest normally above it.  So why  are we not using this key way more often?
+
+Map your leader to <space>
+
+Use it for anything!
+
+I like to
+
+    no <space><space> :wa<cr>
+    no <space>h :nohlsearch<cr>
+
+
+Picture of the thumb looking bored and the pinky looking overworked
+
+So why does the pinky get so much responsibility while both thumbs share one key?
+
+---
+
+class: center, middle, inverse, hljs-monokai
+
+# .title[Vim and<br>Ergonomics]
+
+## David S Colgan
+
+---
+
+![](hands/normal-hand.jpg)
+
+# Happy Hand
+
+---
+
+![](hands/painful-curled-hand.jpg)
+
+# Painful Emacs Hand
+
+Use your thumb more
+
+Put Ctrl on Alt and Ctrl on Windows
+Backspace and Caps Lock
+Use the spacebar
+
+---
+
+# Ctrl in Normal Mode
+
+```html
+    <C-u> Page up
+    <C-d> Page down
+    <C-r> Redo
+    <C-a> Find and increment
+    <C-x> Find and decrement
+    <C-o> Jump back
+    <C-i> Jump forward
+    <C-v> Visual block mode
+```
+
+---
+
+# Ctrl in Insert Mode
+
+```html
+    <C-u> Delete current insertion
+    <C-w> Delete back word
+    <C-r> Insert register
+    <C-n> Autocomplete down
+    <C-p> Autocomplete up
+    <C-x><C-l> Autocomplete line
+    <C-x><C-o> Omnicomplete
+```
+
+---
+
+# Windows [SharpKeys](http://www.randyrants.com/category/sharpkeys/)
+
+![](pictures/sharpkeys.jpg)
+
+From [http://www.randyrants.com/2011/12/sharpkeys_35/](http://www.randyrants.com/2011/12/sharpkeys_35/)
+
+---
+
+# Windows [AutoHotKey](https://autohotkey.com/)
+
+![](pictures/autohotkey.png)
+
+---
+
+# Linux .Xmodmap
+
+```shell
+    remove Control = Control_L
+    remove Control = Control_R
+    remove Mod1 = Alt_L
+    remove Mod1 = Alt_R
+    remove Mod4 = Super_L
+    remove Mod4 = Super_R
+
+    keycode 64 = Control_L
+    keycode 108 = Control_R
+    keycode 133 = Alt_L
+    keycode 134 = Super_R
+    keycode 37 = Super_L
+    keycode 105 = Super_R
+    keycode 135 = Alt_R
+
+    add Control = Control_L
+    add Control = Control_R
+    add Mod1 = Alt_L
+    add Mod1 = Alt_R
+    add Mod4 = Super_L
+    add Mod4 = Super_R
+
+    remove Lock = Caps_Lock
+    keycode 22 = Caps_Lock
+    keycode 66 = BackSpace
+    add Lock = Caps_Lock
+```
+
+---
+
+# Ubuntu Settings
+
+![](pictures/ubuntu.png)
+
+From http://shine.eu.org/ubuntu-esperanto/
+
+---
+
+# Mac OSX
+
+![](pictures/changeosx.jpg)
+
+From [http://superuser.com/questions/250611/mac-os-change-command-to-control-key/250614#250614](http://superuser.com/questions/250611/mac-os-change-command-to-control-key/250614#250614)
+
+---
+
+# Use the Spacebar!
+
+```html
+    let mapleader = ","
+```
+
+---
+
+# Pane Splitting
+
+```html
+    noremap <leader>v <C-w>v
+    noremap <leader>s <C-w>s
+```
+
+---
+
+# Pane Jumping
+
+```html
+    noremap <leader>h <C-w>h
+    noremap <leader>j <C-w>j
+    noremap <leader>k <C-w>k
+    noremap <leader>l <C-w>l
+```
+
+---
+
+# Clear Search Highlight
+
+```html
+    noremap <leader>h :nohlsearch<cr>
+```
+
+---
+
+# Save All
+
+```html
+    noremap <leader><leader> :wa<cr>
+```
+
+---
+
+# Picture of hitting the spacebar exaggeratedly with the left thumb
+
+---
+
+# Picture of hitting the spacebar exaggeratedly with the right thumb
+    
+---
+
+# Further Ideas
+
+* Switch Caps Lock and Backspace
+* Use the Dvorak Keyboard Layout
+* Get a Roost Stand
+
+        </textarea>
+        <script src="remark-latest.min.js">
+        </script>
+        <script>
+var slideshow = remark.create();
+        </script>
+    </body>
+</html>
